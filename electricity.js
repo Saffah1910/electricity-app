@@ -19,7 +19,6 @@ function Electricity() {
     var unitsBought = 0;
     let taken = false;
 
-
     function topUpElectricity(amount) {
 
         if (amount === 10) {
@@ -82,8 +81,8 @@ function Electricity() {
     }
     function advanceTaken() {
         if (taken === true) {
+            
             return true
-
         }
         else {
             return false
