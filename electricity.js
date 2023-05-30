@@ -37,7 +37,7 @@ function Electricity() {
             unitsBought += 35;
         };
         //if the user selects advance then then it should add 21 to the units
-        if (amount === 'advance') {
+        if (amount === 'advance' && total !== 0) {
 
             unitsAvailable += 21;
 
