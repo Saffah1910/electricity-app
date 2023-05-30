@@ -17,6 +17,7 @@ function Electricity() {
     var totalMoney = 0;
     var unitsAvailable = 0;
     var unitsBought = 0;
+    let taken = false;
 
 
     function topUpElectricity(amount) {
@@ -37,15 +38,15 @@ function Electricity() {
             unitsBought += 35;
         };
         //if the user selects advance then then it should add 21 to the units
-        if (amount === 'advance' && total !== 0) {
+        if (amount === 'advance' && taken === false) {
 
             unitsAvailable += 21;
 
-            totalMoney += 30;
+            totalMoney - 30;
             unitsBought += 21;
-          
+            taken = true
         }
-        
+
     }
 
     function getUnitsAvailable() {
@@ -80,13 +81,13 @@ function Electricity() {
         }
     }
     function advanceTaken() {
-        if (topUpElectricity("advance") && totalMoney >= 30) {
-
-            unitsAvailable += 21;
+        if (taken === true) {
+            return true
 
         }
-
-
+        else {
+            return false
+        }
 
     }
 
