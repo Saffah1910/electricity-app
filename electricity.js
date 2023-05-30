@@ -20,18 +20,18 @@ function Electricity() {
     let taken = false;
 
     function topUpElectricity(amount) {
+        if (amount == 10) {
 
-        if (amount === 10) {
             unitsAvailable += 7;
             totalMoney += 10;
             unitsBought += 7;
         };
-        if (amount === 20) {
+        if (amount == 20) {
             unitsAvailable += 14;
             totalMoney += 20;
             unitsBought += 14;
         };
-        if (amount === 50) {
+        if (amount == 50) {
             unitsAvailable += 35;
             totalMoney += 50;
             unitsBought += 35;
@@ -41,11 +41,14 @@ function Electricity() {
 
             unitsAvailable += 21;
 
-            totalMoney - 30;
+          //  totalMoney =- 30;
             unitsBought += 21;
             taken = true
         }
-
+        // unitsAvailable = localStorage["units"];
+        // totalMoney = Number(localStorage["money"]);
+		// unitsAvailable = Number(localStorage["units"]);
+        // unitsBought = Number(localStorage["bought"]);
     }
 
     function getUnitsAvailable() {
@@ -98,6 +101,12 @@ function Electricity() {
     function totalUnitsBought() {
         return unitsBought
     }
+    // function storage() {
+	// 	totalMoney = Number(localStorage["money"]);
+	// 	unitsAvailable = Number(localStorage["units"]);
+    //     unitsBought = Number(localStorage["bought"]);
+        
+	// }
 
     return {
         advanceTaken,
@@ -106,6 +115,7 @@ function Electricity() {
         useAppliance,
         totalAmountSpent,
         totalUnitsBought
+        // storage
 
     }
 }
