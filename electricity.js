@@ -5,6 +5,7 @@
 //totalAmountSpent function will add all the money used and return the amount so i must create a variable that will count all the money
 //totalUnitsBought should return the counter for the amount of units available.
 
+
 function Electricity() {
 
     // do we want to go with this or array? 
